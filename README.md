@@ -125,6 +125,20 @@ echo "" >> CLAUDE.md
 curl https://raw.githubusercontent.com/aim914/team-x-universal-ai-plugin/main/CLAUDE.md >> CLAUDE.md
 ```
 
+**Option C: Other AI Agents (e.g., Opencode)**
+
+If your environment doesn't support `/plugin`, you can manually install the skill:
+
+1. Copy the skill file to your agent's skill directory:
+   ```bash
+   mkdir -p ~/.config/opencode/skills/team-x-guidelines
+   cp path/to/team-x-universal-ai-plugin/skills/team-x-guidelines/SKILL.md ~/.config/opencode/skills/team-x-guidelines/SKILL.md
+   ```
+2. Load the skill in your project:
+   ```
+   /skill team-x-guidelines
+   ```
+
 ## Using with Cursor
 
 This repository includes a committed Cursor project rule ([`.cursor/rules/team-x-guidelines.mdc`](.cursor/rules/team-x-guidelines.mdc)) so the same guidelines apply when you open the project in Cursor. See **[CURSOR.md](CURSOR.md)** for setup, using the rule in other projects, and how this relates to Claude Code.
